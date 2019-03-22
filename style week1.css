@@ -1,0 +1,59 @@
+ h2 {
+  color: yellow;
+  background-color: blue;
+}
+
+.info {
+  color: darkgrey;
+}
+
+#profile {
+ width: 240px;
+ margin: 30px 50px 15px 100px;
+ padding: 5px;
+ border: solid 3px grey;
+}
+
+#undefined {
+  color: rgb(255, 0, 157);
+} 
+
+.content {
+  color:#0b7ff3;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar a {
+  display: block;
+  padding: 8px;
+  background-color: #9bad93;
+  color:yellowen;
+  
+}
+.navbar li a:hover {
+  background-color: black;
+  color: whitesmoke;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+.name {
+  box-sizing: border-box;
+  
+}
+.info p{
+  margin: 0;
+  padding: 0;
+}
