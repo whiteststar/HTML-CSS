@@ -141,9 +141,11 @@ main {
           
     #grid-floats .grid-item:nth-child(-n+1) img {
         width: 70%;
+        padding: 0 17.5%;/*to center the img in li*/ 
     }
 }
     #grid-flex .grid-item:nth-child(-n+1) img {
         width: 70%;
+        padding: 0 17.5%;
 }
 }
