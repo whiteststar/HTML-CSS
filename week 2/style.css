@@ -1,0 +1,149 @@
+
+body {
+    background-image: url("https://bit.ly/2OzmLJZ");
+    background-size: 100%;
+    background-repeat: repeat-y; /*img height is not enough*/
+}
+h1 {
+    text-align: center;
+    font-family: georgia;
+    color: transparent;
+    text-shadow: 0 0 1px rgba(34, 34, 31, 0.533);
+    background-color: rgb(255, 255, 255, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 50px;
+}
+h2 {
+    text-align: center;
+    background-color: rgb(161, 159, 159, 0.4);
+    clear: left;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+h3 {
+    text-align: center;
+    font-size: 25px;
+}
+p {
+    font-size: 20px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+main {
+    margin: auto;
+}
+.grid-item {
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 5px; /*some spaces between items*/
+    height: 600px;    
+    overflow: auto;
+    background-color: rgb(255, 255, 255);
+}
+.grid-item img {
+    max-width: 90%;/*for more space for text*/
+    margin: none;
+    opacity: 0.7;
+}
+/*hover effect for items*/
+.grid-item:hover  img {
+        opacity: 1;
+}
+.grid-item:hover {
+    font-size: 110%;
+}
+
+
+/*mobile-first*/
+#grid-floats .grid-item:nth-child(-n+1) {
+    float: left;
+    width: calc(100% - 12px);/*margins (2x5px) + border(2px)*/
+    border: dotted 2px red; /*highlight*/
+}
+#grid-floats .grid-item:nth-child(n+2) {
+    float: left;
+    width: calc(50% - 10px); /*50% - items' margins(2x5) for fitting the page*/
+}
+
+#grid-flex {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+}
+#grid-flex .grid-item:nth-child(-n+1) {
+    width: calc(100% - 12px);
+    border: dotted 2px red;/*highlight*/
+}
+#grid-flex .grid-item:nth-child(n+2) {
+    width: calc(50% - 10px);
+}
+
+
+/*for tablet screen: wider than 768px*/
+@media(min-width:768px) {
+    h2{color:rgb(132, 49, 139);} /*just to be sure which screen mode is on*/
+    #grid-floats .grid-item {
+        float: left;     
+    }
+    #grid-floats .grid-item:nth-child(-n+2) {
+        width: calc(50% - 12px);
+        border: dotted 2px red;/*highlight*/
+    }
+    #grid-floats .grid-item:nth-child(n+3) { 
+        width: calc(33% - 10px);
+    }
+    #grid-flex {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-around;     
+    }   
+    #grid-flex .grid-item:nth-child(-n+2) {
+        width: calc(50% - 12px);
+        border: dotted 2px red;/*highlight*/
+    }
+    #grid-flex .grid-item:nth-child(n+3) {
+        width: calc(33% - 10px);
+    }
+}
+
+/*for PC screen: wider than 1280px*/
+@media(min-width:1280px) {
+    h2{color:rgb(88, 65, 65);} /*just to be sure which screen mode is on*/
+    #grid-floats .grid-item {
+        float: left;     
+    }
+    #grid-floats .grid-item:nth-child(-n+1) {
+        width: calc(50% - 12px);
+        border: dotted 2px red;/*highlight*/
+    }
+    #grid-floats .grid-item:nth-child(n+2) { 
+        width: calc(25% - 10px);
+        border: 1px solid black; /*i want to highlight only streched elements -although it seems weird...-*/
+    }
+    #grid-flex {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-around;    
+    }
+    #grid-flex .grid-item:nth-child(-n+1) {
+        width: calc(50% - 12px);
+        border: dotted 2px red;/*highlight*/
+    }
+    #grid-flex .grid-item:nth-child(n+2) {
+        width: calc(25% - 10px);
+        border: 1px solid black;
+    }
+
+/*after 1200px, first larger image couses owerflow to its text*/
+@media(min-width:1200px) {
+          
+    #grid-floats .grid-item:nth-child(-n+1) img {
+        width: 70%;
+    }
+}
+    #grid-flex .grid-item:nth-child(-n+1) img {
+        width: 70%;
+}
+}
